@@ -1,0 +1,53 @@
+.divsearch{
+    width: 20%;
+margin: 0 auto;
+padding-left: 50px;
+
+}
+
+.divsearch input{
+    border-radius: 10px;
+    border: none;
+   background-color: #da3636;
+    color: aliceblue;
+    font-size: 20px;
+width: 80%;
+}
+
+.divcontenedormenu{
+    margin: 0 auto;
+    height: 300px;
+    width: 70%;
+} 
+
+.divimgmenu{
+    padding-left: 23px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 60px;
+    border-radius: 80px;
+    
+}
+
+.divmenu{
+    margin: 0 auto;
+    width: 70%;
+}
+.divmenu p{
+    font-size: 23px;
+}
+.divmenu small{
+    color:#da3636;
+    font-size: 20px;
+   
+}
+
+.divimgmenu img{
+
+    border-radius: 50px;
+}
+
+.maincontenregistro{
+    background-color: #f7d8da;
+}

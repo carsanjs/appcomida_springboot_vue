@@ -1,0 +1,267 @@
+<div class="divmaincontent">
+    <div class="container">
+      <!-- <h2 class="text-center mb-4 mt-2"># Crud Vue JS</h2> -->
+      <div
+        class="alert"
+        :class="{
+          'alert-warning': alerta.tipo == 'warning',
+          'alert-success': alerta.tipo == 'success',
+        }"
+        v-if="showAlerta"
+      >
+        {{ alerta.message }}
+        <button type="button" @click.prevent="closeAlerta" class="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="text-right">
+        <a href @click.prevent="add" class="btn btn-info btn-sm"
+          >Agregar Comida</a>
+      </div>
+      <div class="text-right">
+        <a href  @click.prevent="verproductos" class="btn btn-info btn-sm"
+          >Ver Comida</a>
+      </div>
+      <table class="table mt-2">
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>NombreProducto</th>
+            <th>TipoProducto</th>
+            <th>PrecioProducto</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-if="!cadastros || cadastros.length == 0 ">
+            <td colspan="7" class="text-center">no hay Comida registrada</td>
+          </tr>
+          <!--<tr v-else v-for="(c, k) in cadastros" v-bind:key="c">-->
+          <tr v-else v-for="datos in cadastros" v-bind:key="datos">
+            <td>{{ datos.codigo}}</td>
+            <td>{{ datos.nombre_producto}}</td>
+            <td>{{ cadastros.tipo_producto }}</td>
+            <td>{{ cadastros.precio_producto }}</td>
+            <td>
+              <!-- @click.prevent="edit(c, k)" -->
+              <a
+                href
+            
+                class="btn btn-warning text-danger btn-sm"
+                >Editar</a
+              >
+            </td>
+            <td>
+              <a @click.prevent="deletar(k)" class="btn btn-danger btn-sm"
+                >Eliminar</a
+              >
+              <!-- <a @click.prevent="deletar(k)" class="btn btn-danger btn-sm">Eliminar</a> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- # modal form -->
+    <div
+      v-if="modal"
+      ref="modal"
+      class="modal fade"
+      id="modalForm"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalFormLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalFormLabel">{{ modal.title }}</h5>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button> -->
+          </div>
+          <!-- v-on:submit.prevent="save" -->
+          <form v-on:submit.prevent="save">
+            <div class="modal-body">
+              <div class="form-group row">
+                <label class="col-form-label col-3">Codigo</label>
+                <div class="col-5 colfive-modif">
+                  <input
+                    type="text"
+                    v-model="codigo"
+                    name="codigo"
+                    id="codigo"
+                    class="form-control"
+                    placeholder="Codigo."
+                    required
+                  />
+                  <input
+                    name="search"
+                    type="button"
+                    class="form-control Buscar"
+                    value="Buscar"
+             
+                  />
+                   <!-- v-bind:on-click="verproductos"-->
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-3">Nombre</label>
+                <div class="col-5">
+                  <input
+                    type="text"
+                    v-model="nombre_producto"
+                    name="nombre_producto"
+                    id="nombre_producto"
+                    class="form-control"
+                    placeholder="Nombre producto."
+                    v-on:bind="modal.data.cadastros.nombre_producto"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-3">Tipo</label>
+                <div class="col-5">
+                  <input
+                    type="text"
+                    v-model="tipo_producto"
+                    id="tipo_producto"
+                    name="tipo_producto"
+                    class="form-control"
+                    placeholder="Tipo producto"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-3">Precio</label>
+                <div class="col-5">
+                  <input
+                    type="text"
+                    v-model="precio_producto"
+                    name="precio_producto"
+                    id="precio_producto"
+                    class="form-control"
+                    placeholder="Valor producto"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <!-- data-dismiss="modal" -->
+              <button type="button" class="btn btn-secondary ">Cancelar</button>
+              <button type="button" class="btn btn-secondary">
+                Actualizar
+              </button>
+              <button type="button" class="btn btn-secondary">Eliminar</button>
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  ///////////////////////////////////////////////////////////////////////////////////////777
+   closeAlerta() {
+      this.showAlerta = false;
+    },
+
+    edit(row,id) {
+      this.modal.title = "Editar"
+      this.modal.id = id
+      this.modal.data = _.clone(row)
+      $(this.$refs.modal).modal("show");
+    },
+  
+    add(codigo) {
+      this.modal.title = "Registrar Producto";
+      this.modal.id = codigo
+      this.modal.data = {}
+
+      $(this.$refs.modal).modal("show");
+    },
+
+    deletar(k) {
+      this.$delete(this.cadastros, k);
+      window.localStorage.setItem("cadastros", JSON.stringify(this.cadastros));
+      this.alerta.tipo = "warning";
+      this.alerta.message = "Producto eliminado con exito";
+      this.showAlerta = true;
+    },
+
+    save() {
+      if (this.modal.id || this.modal.id === 0) {
+        this.cadastros[this.modal.id] = this.modal.data;
+        var endpoint = "http://localhost:8080/menu/guardar";
+        var opciones = {
+          method: "POST",
+          headers: { "Content-type": "Application/json" },
+          body: JSON.stringify({
+            codigo: this.codigo,
+            nombre_producto: this.nombre_producto,
+            tipo_producto: this.tipo_producto,
+            precio_producto: this.precio_producto,
+          }),
+        };
+        fetch(endpoint, opciones).then(async (Response) => {
+          try {
+            if (Response.status)
+              Swal.fire({
+                icon: "success",
+                title: "Correcto",
+                text: "Registrado correctamente",
+              });
+              this.$router.push("/Registro/menu");
+          } catch (error) {
+            return '{"sucess":false ,"message":"Error, Intentalo nuevamente."}';
+          }
+        });
+        this.cadastros.push(this.modal.data);
+      }
+    
+    },
+
+    verproductos(){
+        // dirrecion donde tengo alejado el ver del backend la api
+    var  endpoint = "http://localhost:8080/menu/"+this.codigo;
+    var opciones={method:"GET"}
+     fetch(endpoint, opciones).then(async Response=>
+    {
+     this.cadastros = await Response.json();
+     });
+    }
+
+    //////////////////////////////////////////////////////////////////////////7
+       <tr >
+            <td>{{ cadastros.codigo}}</td>
+            <td>{{ datos.nombre_producto}}</td>
+            <td>{{ cadastros.tipo_producto }}</td>
+            <td>{{ cadastros.precio_producto }}</td>
+            <td>
+              <!-- @click.prevent="edit(c, k)" -->
+              <a
+                href
+                class="btn btn-warning text-danger btn-sm"
+                >Editar</a
+              >
+            </td>
+            <td>
+              <a @click.prevent="deletar(k)" class="btn btn-danger btn-sm"
+                >Eliminar</a
+              >
+              <!-- <a @click.prevent="deletar(k)" class="btn btn-danger btn-sm">Eliminar</a> -->
+            </td>
+          </tr>

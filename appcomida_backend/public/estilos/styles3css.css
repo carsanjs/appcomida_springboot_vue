@@ -1,0 +1,848 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+    background-image: url("../img/hambur3.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+ height: 600px; 
+}
+
+
+@media (min-width: 768px) {
+
+    main div.contendor{}
+
+    .divlogo img.logo {
+        width: 30%;
+        height: 200px; position: relative;
+        left: 220px;
+    }
+
+    img.logo{}
+}
+
+@media screen and (min-width: 500px) and (max-height:760px) {
+
+.divlogo img.logo {
+    width: 65%;
+    height: 200px;
+     position: relative;
+     left: 40px;
+}
+main.maincontensegun{
+    height: 15%;
+    position: relative;
+    top:210px;
+}
+
+div.contenedorbutton{
+    width: 70%;
+    height:60px;
+    margin: 0 auto;
+}
+
+main div button{
+    width: 80%;
+    height: 50px;
+    position: relative;
+    left: 30px;
+    font-size: 24px;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    background-color:#da3636;
+}
+
+ div.cuentaoff {
+    position: relative;
+    width: 80%;
+    font-size:  22px;  
+}
+
+}
+
+@media screen and  (min-width:412px) and (min-height:914px){
+    body{}
+
+main .contendor {}
+
+main .contendor .contencontendor{
+    padding: 1rem;
+    display: block;
+}
+
+    .divlogo img.logo {
+        width: 80%; 
+        height: 200px; 
+    } 
+
+    main.maincontensegun{
+        height: 15%;
+        position: relative;
+        top:300px;
+    }
+
+    div.contenedorbutton{
+        width: 70%;
+        height:60px;
+        margin: 0 auto;
+    }
+    
+    main div button{
+        width: 80%;
+        height: 50px;
+        position: relative;
+        left: 30px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+
+     div.cuentaoff {
+        position: relative;
+        width: 80%;
+        font-size:  22px;  
+    }
+    
+    div.cuentaoff p a{
+        font-size:  22px;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+@media screen and   (min-width:1050px) and (min-height:650px){
+
+
+    .divlogo img.logo {
+        width: 30%; 
+        position: relative;
+        left: 230px;
+        height: 200px; 
+    } 
+    main.maincontensegun{
+        height: 10%;
+        position: relative;
+        top:200px;
+    }
+    
+    div.contenedorbutton{
+        width: 50%;
+        height:60px;
+        margin: 0 auto;
+    }
+    
+    main div button{
+        width: 60%;
+        height: 50px;
+        position: relative;
+        left: 120px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+    main .contencuentaoff .cuentaoff{
+        width: 30%;
+       padding-left: 8px;
+    }
+}
+
+
+
+
+@media screen and   (min-width:757px) and (min-height: 1500px) {
+.divtitulo h1{ font-size: 80px;}
+
+main.maincontensegun{
+    height: 10%;
+    position: relative;
+    top:700px;
+}
+
+div.contenedorbutton{
+    width: 50%;
+    height:60px;
+    margin: 0 auto;
+}
+
+main div button{
+    width: 80%;
+    height: 50px;
+    position: relative;
+    left: 30px;
+    font-size: 24px;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    background-color:#da3636;
+}
+
+main .contencuentaoff{}
+
+main .contencuentaoff .cuentaoff{
+    width: 50%;
+   padding-left: 5px;
+}
+
+div.cuentaoff p{
+    font-size:  25px;  
+}
+
+div.cuentaoff p a{
+    font-size:  25px;
+}
+
+}
+  
+
+main.maincontenapp{
+    width: 100%;
+    /* background-image: url("../img/FonfoHmaburguesa.jpg"); */
+
+height: 100vh;
+}
+
+main .contendor{
+    position: relative;
+    padding: 0.3rem;
+
+}
+
+main div .contencontendor{
+
+}
+
+div .contencontendor .divlogo{
+    margin: 0 auto;
+    width: 50%;
+
+}
+
+
+div .divtitulo{
+    font-size: 26px;
+    margin: 0 auto;
+}
+
+div .divtitulo h1{
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    color:orange;
+}
+
+div h1 .smallcolor{
+    color:#b8bbb9;
+}
+
+img.logo {
+    width: 90%;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    left: 15px;
+}
+
+.contenedorbutton{
+    width: 50%;
+    height:40px;
+    margin: 0 auto;
+}
+
+button{
+    width: 60%;
+    height: 40px;
+    position: relative;
+    left: 140px;
+    font-size: 24px;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    background-color:#da3636;
+}
+.contencuentaoff{
+    display: flex;
+}
+
+.cuentaoff{
+    display: flex;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 20%;
+    margin: 0 auto;
+   
+}
+
+.classignup{
+    padding-left:0.3rem;
+    font-size: 18px;
+    color: #da3636;
+    text-decoration: none;
+}
+
+.maincontensegun{
+    height: 20%;
+    position: relative;
+    top:200px;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////7777 */
+
+div .divtitulo h1{
+    font-weight: 500;
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    color:orange;
+}
+
+div h1 .smallcolor{
+    color:#b8bbb9;
+}
+
+img.logo {
+    width: 30%;
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    border: none;
+    left: 225px;
+}
+
+/* /////////////////////////////////////////////77 */
+
+div main.maincontenregistro{
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 40%;
+   height: 360px;
+}
+main div h1{
+    font-size: 28px;    
+    color: rgb(29, 28, 28);
+}
+/* .divmaincontent {
+    position: absolute;
+
+    width: 80%;
+    height: 400px;
+    left: 90px;
+    top: 420px;
+} */
+
+.contenidoinputs{
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+.divinputs{
+    display: flex;
+    padding: 0.3rem;
+}
+
+.contenidoinputs .divinputs input{
+    border: none;
+    margin: 0 auto;
+    width: 50%;
+    background-color: transparent;
+    /* padding-left: 30px; */
+    border-bottom: 1px solid;
+    height: 30px;
+
+}
+
+label.classlabel {
+    background: #1e229a;
+    border-radius: 10px;
+    padding-left: 10px;
+    width: 30%;
+}
+.contenedorbutton{
+    position: relative;
+    top: 100px;
+    width: 70%;
+    height:40px;
+    margin: 0 auto;
+}
+
+button{
+    width: 90%;
+    height: 40px;
+   
+    font-size: 24px;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    background-color:#da3636;
+}
+
+.contencuentaoff{
+    position: relative; 
+    top:110px;
+}
+
+.cuentaoff{
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    padding-left: 20px;
+    margin: 0 auto;
+   
+}
+
+.cuentaoff a {
+    color: rgb(29, 28, 28);
+    text-decoration: none;
+}
+
+
+.conttitlewelcome{
+    text-align: center;
+}
+
+
+/* //////////////////////////////////777MEDIAA QUERYS */
+@media screen and (min-width:268px) and (max-width:429px){
+    .divlogo img.logo {
+        width: 100%; 
+        position: relative;
+        left: 30px;
+        height: 200px; 
+    } 
+    main.maincontensegun{
+        height: 10%;
+        position: relative;
+        top:200px;
+    }
+    
+    div.contenedorbutton{
+        width: 50%;
+        height:60px;
+        margin: 0 auto;
+    }
+    /* .divmaincontent {
+        position: absolute;
+       
+        width: 80%;
+        height: 400px;
+        left: 40px;
+        top: 420px;
+    } */
+    
+
+    div main.maincontenregistro{
+        border-radius: 10px;
+        
+        margin: 0 auto;
+        width: 90%;
+       
+       height:400px;
+    }
+
+    main div button{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        left: 5px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+    main .contencuentaoff .cuentaoff{
+        width: 80%;
+       padding-left: 8px;
+    }
+    .cuentaoff a {
+        font-size: 20px;
+        color: rgb(29, 28, 28);
+      
+    }
+    
+    .conttitlewelcome{
+        text-align: center;
+    }
+
+    label.classlabel {
+        background: #1e229a;
+        border-radius: 10px;
+        padding-left: 10px;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-height:658px){
+
+    .divlogo img.logo {
+        width: 70%; 
+        position: relative;
+        left: 30px;
+        height: 200px; 
+    } 
+    main.maincontensegun{
+        height: 10%;
+        position: relative;
+        top:200px;
+    }
+    
+    div.contenedorbutton{
+        width: 50%;
+        height:60px;
+        margin: 0 auto;
+    }
+    /* .divmaincontent {
+        position: absolute;
+       
+        width: 80%;
+        height: 400px;
+        left: 40px;
+        top: 420px;
+    } */
+    
+
+    div main.maincontenregistro{
+        border-radius: 10px;
+      
+        margin: 0 auto;
+        width: 90%;
+       
+       height:400px;
+    }
+
+    main div button{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        left: 5px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+    main .contencuentaoff .cuentaoff{
+        width: 80%;
+       padding-left: 8px;
+    }
+    .cuentaoff a {
+        font-size: 20px;
+        color: rgb(29, 28, 28);
+      
+    }
+    
+    .conttitlewelcome{
+        text-align: center;
+    }
+
+    label.classlabel {
+        background: #1e229a;
+        border-radius: 10px;
+        padding-left: 10px;
+        width: 30%;
+    }
+}
+@media screen and  (min-width:412px) and (min-height:914px){
+    .divlogo img.logo {
+        width: 100%; 
+        position: relative;
+        left: 5px;
+        height: 200px; 
+    } 
+}
+@media screen and (min-width: 500px) and (max-height:760px) {
+
+    .divlogo img.logo {
+        width: 65%;
+        height: 200px;
+         position: relative;
+         left: 40px;
+    }
+    main.maincontensegun{
+        height: 15%;
+        position: relative;
+        top:210px;
+    }
+    
+    div.contenedorbutton{
+        width: 70%;
+        height:60px;
+        margin: 0 auto;
+    }
+    
+    main div button{
+        width: 80%;
+        height: 50px;
+        position: relative;
+        left: 30px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+    
+     div.cuentaoff {
+        position: relative;
+        width: 80%;
+        font-size:  22px;  
+    }
+
+    div main.maincontenregistro{
+        border-radius: 10px;
+       
+        margin: 0 auto;
+        width: 70%;
+       height: 360px;
+    }
+    main div h1{
+        font-size: 28px;    
+        color: rgb(29, 28, 28);
+    }
+
+
+    .cuentaoff a {
+        font-size: 18px;
+        color: rgb(29, 28, 28);
+        text-decoration: none;
+    }
+    
+
+    label.classlabel {
+        background: #1e229a;
+        border-radius: 10px;
+        padding-left: 10px;
+        width: 40%;
+    }
+    
+}
+    @media screen and (min-width:1050px) and (min-height:650px){
+
+
+        .divlogo img.logo {
+            width: 30%; 
+            position: relative;
+            left: 220px;
+            height: 200px; 
+        } 
+        main.maincontensegun{
+            height: 10%;
+            position: relative;
+            top:20px;
+        }
+        
+        div.contenedorbutton{
+            width: 50%;
+            height:60px;
+            margin: 0 auto;
+        }
+
+        div main.maincontenregistro{
+            border-radius: 10px;
+          
+            margin: 0 auto;
+            width: 40%;
+           height: 360px;
+        }
+
+        main div button{
+            width: 100%;
+            height: 50px;
+            position: relative;
+            left: 5px;
+            font-size: 24px;
+            color: #ffffff;
+            border: none;
+            border-radius: 40px;
+            background-color:#da3636;
+        }
+        main .contencuentaoff .cuentaoff{
+            width: 60%;
+           padding-left: 8px;
+        }
+        .cuentaoff a {
+            font-size: 20px;
+            color: rgb(29, 28, 28);
+          
+        }
+        
+        
+        .conttitlewelcome{
+            text-align: center;
+        }
+
+        label.classlabel {
+            background: #1e229a;
+            border-radius: 10px;
+            padding-left: 10px;
+            width: 30%;
+        }
+} 
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+    .divlogo img.logo {
+        width: 30%; 
+        position: relative;
+        left: 230px;
+        height: 200px; 
+    } 
+    main.maincontensegun{
+        height: 10%;
+        position: relative;
+        top:200px;
+    }
+    
+    div.contenedorbutton{
+        width: 50%;
+        height:60px;
+        margin: 0 auto;
+    }
+
+    div main.maincontenregistro{
+        border-radius: 10px;
+        
+        margin: 0 auto;
+        width: 40%;
+       height: 360px;
+    }
+
+    main div button{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        left: 5px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+    main .contencuentaoff .cuentaoff{
+        width: 60%;
+       padding-left: 8px;
+    }
+    .cuentaoff a {
+        font-size: 20px;
+        color: rgb(29, 28, 28);
+      
+    }
+    
+    
+    .conttitlewelcome{
+        text-align: center;
+    }
+
+    label.classlabel {
+        background: #1e229a;
+        border-radius: 10px;
+        padding-left: 10px;
+        width: 30%;
+    }
+}
+@media screen and   (min-width:757px) and (min-height: 1500px){
+    .divlogo img.logo {
+        width: 50%; 
+        position: relative;
+        left: 100px;
+        height: 200px; 
+    } 
+    main.maincontensegun{
+        height: 10%;
+        position: relative;
+        top:200px;
+    }
+    
+    div.contenedorbutton{
+        width: 50%;
+        height:60px;
+        margin: 0 auto;
+    }
+
+    div main.maincontenregistro{
+        border-radius: 10px;
+      
+        margin: 0 auto;
+        width: 80%;
+       height: 360px;
+    }
+
+    main div button{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        left: 5px;
+        font-size: 24px;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        background-color:#da3636;
+    }
+    main .contencuentaoff .cuentaoff{
+        width: 90%;
+       padding-left: 100px;
+    }
+    .cuentaoff a {
+        font-size: 18px;
+        color: rgb(29, 28, 28);
+      
+    }
+    
+    
+    .conttitlewelcome{
+        text-align: center;
+    }
+
+    div .contencontendor .divlogo{
+        margin: 0 auto;
+        width: 60%;
+    
+    }
+
+    /* .divmaincontent {
+        position: absolute;
+
+        width: 80%;
+        height: 400px;
+        left: 80px;
+        top: 420px;
+    } */
+    .divtitulo{
+        margin: 0 auto;
+        width: 40%;
+      
+    }
+    div .divtitulo h1{
+        font-weight: 500;
+        margin: 0;
+        font-size: 50px;
+        text-align: center;
+        color:orange;
+    }
+    
+    div h1 .smallcolor{
+        color:#b8bbb9;
+    }
+    
+div.divlogo{
+    margin:0;
+}
+label.classlabel {
+    background: #1e229a;
+    border-radius: 10px;
+    padding-left: 10px;
+    width: 30%;
+}
+}

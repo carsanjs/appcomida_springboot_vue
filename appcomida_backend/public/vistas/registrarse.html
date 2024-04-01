@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/styles3css.css">
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <div id="app">
+        <main class="maincontenapp">
+            <div class="contendor">
+                <div class="contencontendor">
+                    <div class="divlogo">
+                        <img class="logo" src="../img/fasfood2.jpg" alt="">
+                    </div>
+
+                    <div class="divtitulo">
+                        <h1 class="h1color">App<small class="smallcolor">Comida</small></h1>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="divmaincontent">
+
+                <main class="maincontenregistro">
+
+
+                    <div class="contenidoinputs">
+                        <div class="divinputs">
+                            <label class="classlabel" for="">Cedula
+
+                            </label>
+                            <input type="text" v-model="id">
+                        </div>
+                        <div class="divinputs">
+                            <label class="classlabel" for="">Nombre
+
+                            </label>
+                            <input type="text" v-model="nombre">
+                        </div>
+                        <div class="divinputs">
+                            <label class="classlabel" for="">Apellido</label>
+                            <input type="text" v-model="apellido">
+                        </div>
+
+                        <div class="divinputs">
+                            <label class="classlabel" for="">Usuario</label>
+                            <input type="text" v-model="usuario">
+                        </div>
+
+                        <div class="divinputs">
+                            <label class="classlabel" for="">Correo</label>
+                            <input type="email" v-model="correo">
+                        </div>
+
+
+                        <div class="divinputs">
+                            <label class="classlabel" for="">Contraseña</label>
+                            <input type="password" v-model="password">
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+                    <div class="contenedorbutton">
+                        <button v-on:click="registrar">Registrarse</button>
+                    </div>
+
+                </main>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+    <script src="../js/registrar.js"></script>
+</body>
+
+</html>

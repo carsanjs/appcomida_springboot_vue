@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/styles2css.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>iniciar sesión</title>
+</head>
+
+<body class="bodysession" id="bodysession">
+    <div id="app" class="idapp">
+
+        <main class="maincontenapp">
+            <div class="contendor">
+                <div class="contencontendor">
+                    <div class="divlogo">
+                        <img class="logo" src="../img/fasfood2.jpg" alt="">
+                    </div>
+
+                    <div class="divtitulo">
+                        <h1 class="h1color">{{primertitle}}<small class="smallcolor">{{segindotitle}}</small></h1>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <div class="divmaincontent">
+
+            <main class="maincontenregistro">
+                <div class="conttitlewelcome">
+                    <h1>{{subtitle}}</h1>
+                </div>
+
+                <div class="contenidoinputs">
+                    <div class="divinputs">
+                        <input type="email" v-model="user" value="Email.">
+                    </div>
+                    <div class="divinputs">
+                        <input type="password" v-model="password" value="Password.">
+                    </div>
+
+                </div>
+
+
+                <div class="contenedorbutton">
+                    <button type="button" class="classignup" v-on:click="login">Iniciar Sesion</button>
+                </div>
+
+
+                <div class="contencuentaoff">
+                    <div class="cuentaoff">
+                        <a class="classignup" href="">{{ olclave}}</a>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="../js/login.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
+</body>
+
+</html>

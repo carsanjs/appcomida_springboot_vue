@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="estilos/stylecss.css">
+    <title>Inicio</title>
+</head>
+<body>
+    
+<div id="app">
+
+<main class="maincontenapp">
+    <div class="contendor">
+        <div class="contencontendor">
+            <div class="divlogo">
+                <img  class="logo" src="img/fasfood2.jpg" alt="">
+            </div>
+
+            <div class="divtitulo">
+                <h1 class="h1color">{{primertitle}}<small class="smallcolor">{{segindotitle}}</small></h1> 
+           
+            </div>
+            
+        </div>
+       
+    </div>
+
+
+
+
+<main class="maincontensegun">
+    <div class="contenedorbutton">
+       <a class="classignup" href="vistas/iniciarsession.html"><button type="button">{{login}}</button></a>
+      </div>
+  <div class="contencuentaoff">
+      <div class="cuentaoff">
+          <p>{{sincuenta}}<a class="classignup" href="vistas/registrarse.html">{{registrase}}</a></p>
+      </div>
+     
+  </div>
+  
+</main>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+    <script>
+       const App= new Vue({
+        el:'#app',
+        data() {
+            return {
+                primertitle:"FAST",
+                segindotitle:"FOOD",
+                login:"Login",
+                registrase:"SingUp",
+                sincuenta:"No tienes cuenta?"
+            }
+        },
+
+       })
+    </script>
+</body>
+</html>
